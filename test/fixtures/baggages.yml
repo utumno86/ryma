@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  count: 1
+  qrcode: MyString
+  delivered: false
+  guest: one
+
+two:
+  count: 1
+  qrcode: MyString
+  delivered: false
+  guest: two
