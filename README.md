@@ -1,24 +1,24 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Ryma luggage tracking app.
 
-Things you may want to cover:
+TODO
+----
+- Set up users
+- Set up guest tracking
+- Set up luggage tracking
 
-* Ruby version
 
-* System dependencies
+Ruby version - 2.4.1
+--------------------
 
-* Configuration
+Rails Version - 5.1.2
+---------------------
 
-* Database creation
 
-* Database initialization
+Webpack Info
+------------
 
-* How to run the test suite
+- run rails s in one terminal and ./bin/webpack-dev-server --host 127.0.0.1 in the other to get react to load
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- Set up info: https://medium.com/@hpux/rails-5-1-loves-javascript-a1d84d5318b
