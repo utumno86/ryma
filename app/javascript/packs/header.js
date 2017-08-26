@@ -11,7 +11,7 @@ class Header extends React.Component {
           <img src="https://www.vikingrivercruises.com/Content/images/v3/rivers/V_logo_h_cruises_2x.png" width="320" alt="Vicking logo"/>
           </div>
         </div>
-      
+
         <div className="center">
             <div className="title cruise-hdr-details">
               Welcome Aboard
