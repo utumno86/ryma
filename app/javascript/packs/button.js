@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 // import 'bootstrap/dist/css/bootstrap.css'
 // import { Col } from 'react-bootstrap'
 
-class Button extends React.Component {
+class Header extends React.Component {
   render () {
     return (
       <h1> TEST HEADER </h1>
@@ -10,4 +10,4 @@ class Button extends React.Component {
   }
 }
 
-export default Button
+export default Header

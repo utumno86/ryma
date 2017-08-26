@@ -2608,9 +2608,9 @@ jsprim@^1.2.2:
     json-schema "0.2.3"
     verror "1.10.0"
 
-"jsqr@git+https://github.com/JodusNodus/jsQR.git":
+"jsqr@https://github.com/JodusNodus/jsQR.git":
   version "0.2.2"
-  resolved "git+https://github.com/JodusNodus/jsQR.git#5ba1acefa1cbb9b2bc92b49f503f2674e2ec212b"
+  resolved "https://github.com/JodusNodus/jsQR.git#5ba1acefa1cbb9b2bc92b49f503f2674e2ec212b"
 
 keycode@^2.1.2:
   version "2.1.9"
@@ -4360,6 +4360,10 @@ sdp@^1.0.0:
   version "1.5.4"
   resolved "https://registry.yarnpkg.com/sdp/-/sdp-1.5.4.tgz#8e038f6ddb14bd765ae1f4b5216e12094511e0d0"
 
+sdp@^2.1.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/sdp/-/sdp-2.3.0.tgz#34600675379fac0508993bea42bc7b228986d5cf"
+
 seed-random@2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/seed-random/-/seed-random-2.2.0.tgz#2a9b19e250a817099231a5b99a4daf80b7fbed54"
@@ -5064,6 +5068,12 @@ webrtc-adapter@^2.0.8:
   resolved "https://registry.yarnpkg.com/webrtc-adapter/-/webrtc-adapter-2.1.0.tgz#612b5bc6ce8e73c9d0660038a21f9255a867bf3e"
   dependencies:
     sdp "^1.0.0"
+
+webrtc-adapter@^4.2.2:
+  version "4.2.2"
+  resolved "https://registry.yarnpkg.com/webrtc-adapter/-/webrtc-adapter-4.2.2.tgz#17896c047084fd4c567958a0cd4321e17f32773c"
+  dependencies:
+    sdp "^2.1.0"
 
 websocket-driver@>=0.5.1:
   version "0.6.5"
