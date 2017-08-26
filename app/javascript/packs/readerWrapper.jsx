@@ -1,15 +1,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Button from './button'
-// import qrReader from './qrReader'
+import qrReader from './qrReader'
 // import styles from './assets/stylesheets/pages'
 
 document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(
     <div>
-      <Button />
-      {/* <qrReader /> */}
+      <h1> Ryma QR Reader </h1>
+      <qrReader />
     </div>,
-    document.getElementById('main')
+    document.body.appendChild(document.createElement('div'))
   )
 })
