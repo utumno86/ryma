@@ -1,3 +1,3 @@
 class Guest < ApplicationRecord
-  has_many :baggage
+  has_many :baggages
 end
