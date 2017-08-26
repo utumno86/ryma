@@ -1,49 +1,46 @@
 import React, { Component } from 'react'
 import QrReader from 'react-qr-reader'
 
-class LegacyModeExample extends Component {
-  constructor (props) {
+class LegacyModeExample extends React.Component {
+  constructor(props){
     super(props)
     this.state = {
       delay: 100,
-      result: 'No result'
+      result: 'No result',
     }
 
     this.handleScan = this.handleScan.bind(this)
     this.openImageDialog = this.openImageDialog.bind(this)
   }
-  handleScan (result) {
-    if (result) {
+  handleScan(result){
+    if(result){
       this.setState({ result })
     }
   }
-  handleError (err) {
+  handleError(err){
     console.error(err)
   }
-  openImageDialog () {
-    this.refs.qrReader.openImageDialog()
+  openImageDialog() {
+    this.refs.qrReader1.openImageDialog()
   }
 
-  render () {
+  render(){
     const previewStyle = {
       height: 240,
-      width: 320
+      width: 320,
     }
 
-    return (
+    return(
       <div>
-                  <p className="header-subtitle">We would like to notify you when your bags arrive in your state room.</p>
-    
         <QrReader
-          ref='qrReader'
+          ref="qrReader1"
           delay={this.state.delay}
           style={previewStyle}
           onError={this.handleError}
           onScan={this.handleScan}
           legacyMode
         />
-        
-        <input type='button' value='Submit QR Code' onClick={this.openImageDialog} />
+        <input type="button" value="Submit QR Code" onClick={this.openImageDialog} />
         <p>{this.state.result}</p>
       </div>
     )

@@ -5,7 +5,20 @@ import React, { Component } from 'react'
 class Header extends React.Component {
   render () {
     return (
-      <h1> TEST HEADER </h1>
+      <div className="trd-tablet-header-base">
+        <div className="trd-body-wrapper">
+          <div className="trd-header-logo">
+          <img src="https://www.vikingrivercruises.com/Content/images/v3/rivers/V_logo_h_cruises_2x.png" width="320" alt="Vicking logo"/>
+          </div>
+        </div>
+      
+        <div className="center">
+            <div className="title cruise-hdr-details">
+              Welcome Aboard
+              </div>
+          </div>
+      </div>
+
     )
   }
 }
