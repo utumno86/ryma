@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170826152323) do
+ActiveRecord::Schema.define(version: 20170826192341) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(version: 20170826152323) do
     t.string "reservation"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["roomnumber"], name: "index_guests_on_roomnumber", unique: true
   end
 
   add_foreign_key "baggages", "guests"
