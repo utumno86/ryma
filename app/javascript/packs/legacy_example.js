@@ -21,7 +21,7 @@ class LegacyModeExample extends Component {
     console.error(err)
   }
   openImageDialog () {
-    this.refs.qrReader1.openImageDialog()
+    this.refs.qrReader.openImageDialog()
   }
 
   render () {
