@@ -9,6 +9,10 @@ Rails.application.configure do
   # Do not eager load code on boot.
   config.eager_load = false
 
+  # for webpacker you must run `rails s` in one tab of your command line and `./bin/webpack-dev-server --host 127.0.0.1` in another to have react working
+  config.x.webpacker[:dev_server_host] = "http://127.0.0.1:8080"
+
+
   # Show full error reports.
   config.consider_all_requests_local = true
 
