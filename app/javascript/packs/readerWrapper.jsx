@@ -7,7 +7,6 @@ import LegacyModeExample from './legacy_example'
 document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(
     <div>
-      <h1> Ryma QR Reader </h1>
       <div className='row'>
         <qrReader />
         <LegacyModeExample />

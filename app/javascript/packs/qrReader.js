@@ -39,7 +39,8 @@ class qrReader extends Component {
     }
 
     return (
-      <div>
+      <div className="center">
+        <input type='button' value='Scan Your Lugage QR Code' onClick={this.openImageDialog} />
         <QrReader
           ref='qrReader'
           delay={this.state.delay}
@@ -47,7 +48,7 @@ class qrReader extends Component {
           onError={this.handleError}
           onScan={this.handleScan}
           legacyMode />
-        <input type='button' value='Submit QR Code' onClick={this.openImageDialog} />
+        
         <p>{this.state.result}</p>
       </div>
     )
