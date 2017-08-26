@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Header from './button'
+import Header from './Header'
 // import qrReader from './qrReader'
 // import styles from './assets/stylesheets/pages'
 
