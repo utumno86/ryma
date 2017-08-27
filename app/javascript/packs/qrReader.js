@@ -44,7 +44,6 @@ class qrReader extends Component {
           onScan={this.handleScan}
           legacyMode />
 
-        <p>{this.state.result}</p>
       </div>
     )
   }

@@ -42,7 +42,7 @@ class LegacyModeExample extends React.Component {
           legacyMode
         />
         <input type="button" value="Submit QR Code" onClick={this.openImageDialog} />
-        <p>{this.state.result}</p>
+        
       </div>
     )
   }
