@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <qrReader />
         <LegacyModeExample />
       </div>
+      <img src='./logo.png' />
     </div>,
     document.body.appendChild(document.createElement('div'))
   )
