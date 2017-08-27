@@ -26,15 +26,16 @@ class LegacyModeExample extends Component {
 
   render () {
     const previewStyle = {
-      height: 240,
-      width: 320
+      height: 0,
+      width: 0,
+      backgroundSize: '100% auto',
+
     }
 
     return (
-      <div>
-                  <p className="header-subtitle">We would like to notify you when your bags arrive in your state room.</p>
-    
-        <QrReader
+      <div className="center">
+        <p className="header-subtitle">Take a picture of your luggage code.</p>   
+        <p>Please scan your luggage QR Code with your phone and we will send a notification when your luggage arrives in your stateroom.</p>   <QrReader
           ref='qrReader'
           delay={this.state.delay}
           style={previewStyle}
@@ -42,8 +43,10 @@ class LegacyModeExample extends Component {
           onScan={this.handleScan}
           legacyMode
         />
-        
-        <input type='button' value='Submit QR Code' onClick={this.openImageDialog} />
+        <img src="../assets/sampleQRCode.jpg" />
+        <br/>
+<button className="btn btn-default cta btn-primary-rivers btn-red" onClick={this.openImageDialog}> <span className="camIcon"></span><span className="btnText">Tap to Scan</span></button>
+  
         <p>{this.state.result}</p>
       </div>
     )

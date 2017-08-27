@@ -27,8 +27,8 @@ class LegacyModeExample extends React.Component {
   render(){
     const previewStyle = {
       height: 240,
-      width: 320,
-    }
+      width: 320
+        }
 
     return(
       <div>
