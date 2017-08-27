@@ -16,8 +16,8 @@ class LegacyModeExample extends Component {
   handleScan (result) {
     if (result) {
       // this.setState({ result })
-      const id = 'q3dbsd'
-      this.props.history.push('/staff_response/' + id)
+      // const id = 'q3dbsd'
+      this.props.history.push('/staff_response')
     }
   }
 

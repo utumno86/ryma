@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <Route exact path='/' component={GuestPage} />
         <Route path='/admin' component={AdminPage} />
         <Route path='/guest/:id' component={GuestStatus} />
-        <Route path='/staff_response/:id' component={StaffResponse} />
+        <Route path='/staff_response' component={StaffResponse} />
       </Switch>
     </BrowserRouter>,
     document.getElementById('main')
