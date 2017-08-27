@@ -1,3 +1,4 @@
+DO NOT USE
 import React, { Component } from 'react'
 import QrReader from 'react-qr-reader'
 
@@ -34,7 +35,7 @@ class AdminQRScanner extends Component {
 
     return (
       <div className="center">
-        <p className="header-subtitle">Scan Guest Luggage to update status.</p>   
+        <p className="header-subtitle">Scan Guest Luggage to update status.</p>
         <p></p>
            <QrReader
           ref='qrReader'
@@ -47,7 +48,7 @@ class AdminQRScanner extends Component {
         <img src="../assets/sampleQRCode.jpg" />
         <br/>
 <button className="btn btn-default cta btn-primary-rivers btn-red" onClick={this.openImageDialog}> <span className="camIcon"></span><span className="btnText">Tap to Scan</span></button>
-  
+
         <p>{this.state.result}</p>
       </div>
     )
