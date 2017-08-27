@@ -20,11 +20,6 @@ class qrReader extends Component {
     }
   }
 
-  // handleScan (data) {
-  //   this.setState({
-  //     result: data
-  //   })
-  // }
   handleError (err) {
     console.error(err)
   }
@@ -48,7 +43,7 @@ class qrReader extends Component {
           onError={this.handleError}
           onScan={this.handleScan}
           legacyMode />
-        
+
         <p>{this.state.result}</p>
       </div>
     )

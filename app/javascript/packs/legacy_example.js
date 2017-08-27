@@ -8,7 +8,6 @@ class LegacyModeExample extends Component {
       delay: 100,
       result: 'No result'
     }
-
     this.handleScan = this.handleScan.bind(this)
     this.openImageDialog = this.openImageDialog.bind(this)
   }
@@ -28,14 +27,14 @@ class LegacyModeExample extends Component {
     const previewStyle = {
       height: 0,
       width: 0,
-      backgroundSize: '100% auto',
-
+      backgroundSize: '100% auto'
     }
 
     return (
       <div className="center">
         <p className="header-subtitle">Take a picture of your luggage code.</p>
-        <p>Please scan your luggage QR Code with your phone and we will send a notification when your luggage arrives in your stateroom.</p>   <QrReader
+        <p>Please scan your luggage QR Code with your phone and we will send a notification when your luggage arrives in your stateroom.</p>
+        <QrReader
           ref='qrReader'
           delay={this.state.delay}
           style={previewStyle}
@@ -44,8 +43,8 @@ class LegacyModeExample extends Component {
           legacyMode
         />
         <img src="../assets/sampleQRCode.jpg" />
-        <br/>
-<button className="btn btn-default cta btn-primary-rivers btn-red" onClick={this.openImageDialog}> <span className="camIcon"></span><span className="btnText">Tap to Scan</span></button>
+        <br />
+        <button className="btn btn-default cta btn-primary-rivers btn-red" onClick={this.openImageDialog}> <span className="camIcon"></span><span className="btnText">Tap to Scan</span></button>
 
         <p>{this.state.result}</p>
       </div>
