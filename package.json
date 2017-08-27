@@ -29,6 +29,7 @@
     "react-bootstrap": "^0.31.2",
     "react-dom": "^15.6.1",
     "react-qr-reader": "^1.2.1",
+    "react-router-dom": "^4.2.2",
     "resolve-url-loader": "^2.1.0",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2",

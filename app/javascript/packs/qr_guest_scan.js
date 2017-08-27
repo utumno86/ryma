@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import QrReader from 'react-qr-reader'
 
-class LegacyModeExample extends Component {
+class AdminQRScanner extends Component {
   constructor (props) {
     super(props)
     this.state = {
@@ -34,8 +34,9 @@ class LegacyModeExample extends Component {
 
     return (
       <div className="center">
-        <p className="header-subtitle">Take a picture of your luggage code.</p>   
-        <p>Please scan your luggage QR Code with your phone and we will send a notification when your luggage arrives in your stateroom.</p>   <QrReader
+        <p className="header-subtitle">Scan Guest Luggage to update status.</p>   
+        <p></p>
+           <QrReader
           ref='qrReader'
           delay={this.state.delay}
           style={previewStyle}
@@ -53,4 +54,4 @@ class LegacyModeExample extends Component {
   }
 }
 
-export default LegacyModeExample
+export default AdminQRScanner
