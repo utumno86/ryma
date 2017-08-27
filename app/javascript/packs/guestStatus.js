@@ -1,14 +1,9 @@
 import React, { Component } from 'react'
-<<<<<<< HEAD
-import PropTypes from 'prop-types'
-import footerIcons from './images/footer-icons.png'
-=======
 import StatusHeader from './status_header'
 import Footer from './footer'
-import footerIcons from './images/footer-icons.png'
+// import footerIcons from './images/footer-icons.png'
 import camelImg from './images/lady_on_camel.jpg'
 import dawnImg from './images/Terrace_Dawn.jpg'
->>>>>>> 8a50a230c06307594e97b9a306e950bdd4de28ca
 
 class GuestStatus extends React.Component {
   constructor(props) {
