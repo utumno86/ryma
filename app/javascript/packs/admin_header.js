@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
-import LegacyModeExample from './legacy_example'
-import V_logo_h_cruises_2x from'./images/V_logo_h_cruises_2x.png'
-
+import LegacyModeExample from './qr_guest_scan'
+import V_logo_h_cruises_2x from './images/V_logo_h_cruises_2x.png'
 class AdminHeader extends React.Component {
 
   render () {
