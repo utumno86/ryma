@@ -1,8 +1,3 @@
-# Load the Rails application.
-require_relative 'application'
-
-# Initialize the Rails application.
-Rails.application.initialize!
 ActionMailer::Base.smtp_settings = {
     :port =>           '587',
     :address =>        'smtp.sendgrid.net',
@@ -12,3 +7,5 @@ ActionMailer::Base.smtp_settings = {
     :authentication => :plain,
     :enable_starttls_auto => true
 }
+ActionMailer::Base.delivery_method = :smtp
+ActionMailer::Base.default_url_options = { :host => 'ryma.herokuapp.com' }
