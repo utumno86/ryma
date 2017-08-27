@@ -40,13 +40,13 @@ class GuestStatus extends React.Component {
         <h4> In the mean time...</h4>
 
         <div className='copy-block-container center'>
-          <img src={dawnImg} className='center' />
+          <img src={dawnImg} className='center imgWidth' />
           <br />
           <p>Join us in the Lounge and sample some great food and drinks while you enjoy the view on the open-air Acquavit Terrace</p>
           <a href='' className='floatRight'>Book a Tour</a>
         </div>
         <div className='copy-block-container center'>
-          <img src={camelImg} className='center-block' />
+          <img src={camelImg} className='center-block imgWidth' />
           <br />
           <p>Head to the Nile’s west bank to visit the Valley of the Kings, where ancient pharaohs were entombed deep in the hillsides, and the Valley of the Queens, resting place of pharaohs’ wives.</p>
           <a href='' className='floatRight'>Book a Tour</a>

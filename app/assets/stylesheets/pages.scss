@@ -182,11 +182,15 @@ h3 {
     margin-left:20px;
     display: inline-block;
 }
-p{
+p {
         font-size: 16px;
     letter-spacing: .025em;
     margin: 0 0 10.5px;
 
+}
+.imgWidth{
+  display:block;
+  width:100%;
 }
 .head-line {
     position: relative;
@@ -221,7 +225,7 @@ hr{
 }
 h4{
     color: #2b3d52;
-  
+
 }
 .copy-block-container {
 
@@ -561,4 +565,3 @@ h4{
 #feature_slider.cycle-slideshow-wrapper .feature_text_modded {
   display: none !important;
 }
-
