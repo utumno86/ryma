@@ -1,4 +1,4 @@
-DO NOT USE
+// DO NOT USE
 import React, { Component } from 'react'
 import QrReader from 'react-qr-reader'
 
