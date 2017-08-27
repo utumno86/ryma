@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
 import QrReader from 'react-qr-reader'
+import SampleQRC from './images/sampleQRCode.jpg'
 
 class LegacyModeExample extends Component {
   constructor (props) {
     super(props)
     this.state = {
       delay: 100,
-      result: 'No result'
+      result: ''
     }
     this.handleScan = this.handleScan.bind(this)
     this.openImageDialog = this.openImageDialog.bind(this)
@@ -16,9 +17,11 @@ class LegacyModeExample extends Component {
       this.setState({ result })
     }
   }
+
   handleError (err) {
     console.error(err)
   }
+
   openImageDialog () {
     this.refs.qrReader.openImageDialog()
   }
@@ -42,9 +45,12 @@ class LegacyModeExample extends Component {
           onScan={this.handleScan}
           legacyMode
         />
-        <img src="../assets/sampleQRCode.jpg" />
+        <img src={SampleQRC} />
         <br />
-        <button className="btn btn-default cta btn-primary-rivers btn-red" onClick={this.openImageDialog}> <span className="camIcon"></span><span className="btnText">Tap to Scan</span></button>
+        <button className="btn btn-default cta btn-primary-rivers btn-red" onClick={this.openImageDialog}>
+          <span className="camIcon" />
+          <span className="btnText">Tap to Scan</span>
+        </button>
 
         
       </div>
