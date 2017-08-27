@@ -78,6 +78,7 @@ GEM
     jbuilder (2.7.0)
       activesupport (>= 4.2.0)
       multi_json (>= 1.2)
+    json (2.1.0)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -158,6 +159,8 @@ GEM
     selenium-webdriver (3.5.1)
       childprocess (~> 0.5)
       rubyzip (~> 1.0)
+    sendgrid (1.2.4)
+      json
     slop (3.6.0)
     spring (2.0.2)
       activesupport (>= 4.2)
@@ -216,6 +219,7 @@ DEPENDENCIES
   react-bootstrap-rails
   sass-rails (~> 5.0)
   selenium-webdriver
+  sendgrid
   spring
   spring-watcher-listen (~> 2.0.0)
   turbolinks (~> 5)
