@@ -8,7 +8,7 @@ class Header extends React.Component {
       <div className="trd-tablet-header-base">
         <div className="trd-body-wrapper">
           <div className="trd-header-logo">
-          <img src="https://www.vikingrivercruises.com/Content/images/v3/rivers/V_logo_h_cruises_2x.png" width="320" alt="Vicking logo"/>
+          <img src="../assets/V_logo_h_cruises_2x.png" width="320" alt="Vicking logo"/>
           </div>
         </div>
 
