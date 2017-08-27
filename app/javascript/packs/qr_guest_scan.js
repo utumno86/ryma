@@ -29,8 +29,7 @@ class AdminQRScanner extends Component {
     const previewStyle = {
       height: 0,
       width: 0,
-      backgroundSize: '100% auto',
-
+      backgroundSize: '100% auto'
     }
 
     return (
@@ -47,7 +46,7 @@ class AdminQRScanner extends Component {
         />
         <img src="../assets/sampleQRCode.jpg" />
         <br/>
-<button className="btn btn-default cta btn-primary-rivers btn-red" onClick={this.openImageDialog}> <span className="camIcon"></span><span className="btnText">Tap to Scan</span></button>
+        <button className="btn btn-default cta btn-primary-rivers btn-red" onClick={this.openImageDialog}> <span className="camIcon"></span><span className="btnText">Tap to Scan</span></button>
 
 
       </div>
