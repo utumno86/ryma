@@ -5,4 +5,5 @@ class ApplicationController < ActionController::Base
   respond_to :html
 
   protect_from_forgery with: :null_session
+  before_action :authenticate_user!, :except => [:index, :guest]
 end

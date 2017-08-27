@@ -7,11 +7,11 @@ import LegacyModeExample from './legacy_example'
 document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(
     <div>
-      <h1> Ryma QR Reader </h1>
       <div className='row'>
         <qrReader />
         <LegacyModeExample />
       </div>
+      <img src='./logo.png' />
     </div>,
     document.body.appendChild(document.createElement('div'))
   )
