@@ -52,7 +52,7 @@ class LegacyModeExample extends Component {
           <span className="btnText">Tap to Scan</span>
         </button>
 
-        <p>{this.state.result}</p>
+        
       </div>
     )
   }

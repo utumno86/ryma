@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import GuestPage from './guest_page'
 import AdminPage from './admin_page'
+import GuestStatus from './guestStatus'
 
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
@@ -15,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
       <Switch>
         <Route exact path='/' component={GuestPage} />
         <Route path='/admin' component={AdminPage} />
+        <Route path='/guest' component={GuestStatus} />
       </Switch>
     </BrowserRouter>,
     document.getElementById('main')
