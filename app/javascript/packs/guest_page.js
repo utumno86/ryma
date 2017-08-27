@@ -10,7 +10,7 @@ class GuestPage extends React.Component {
     return (
       <div className='trd-tablet-header-base'>
         <Header />
-        <LegacyModeExample />
+        <LegacyModeExample history={this.props.history} />
         <Footer />
       </div>
 

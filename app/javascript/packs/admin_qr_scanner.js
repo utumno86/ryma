@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import QrReader from 'react-qr-reader'
 import SampleQRC from './images/sampleQRCode.jpg'
+// import StaffResponse from 'staff_response'
 
 class LegacyModeExample extends Component {
   constructor (props) {
@@ -16,7 +17,7 @@ class LegacyModeExample extends Component {
     if (result) {
       // this.setState({ result })
       const id = 'q3dbsd'
-      this.props.history.push('/guest/' + id)
+      this.props.history.push('/staff_response/' + id)
     }
   }
 
@@ -37,8 +38,8 @@ class LegacyModeExample extends Component {
 
     return (
       <div className='center'>
-        <p className='header-subtitle'>Take a picture of your luggage code.</p>
-        <p>Please scan your luggage QR Code with your phone and we will send a notification when your luggage arrives in your stateroom.</p>
+        <p className='header-subtitle'>Please scan Guests' QR Code</p>
+        {/* <p>Please scan Guests' QR Code with your phone and we will send a notification when your luggage arrives in your stateroom.</p> */}
         <QrReader
           ref='qrReader'
           delay={this.state.delay}
