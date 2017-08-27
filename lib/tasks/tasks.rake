@@ -9,7 +9,8 @@ namespace :tasks do
         first: row[1],
         last: row[2],
         roomnumber: row[3],
-        email: row[4]
+        email: row[4],
+        bagstatus: false
       )
     end
   end
