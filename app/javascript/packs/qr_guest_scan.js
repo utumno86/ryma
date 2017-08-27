@@ -36,6 +36,7 @@
       backgroundSize: '100% auto'
     }
 
+<<<<<<< HEAD
      return (
        <div className="center">
 
@@ -59,5 +60,28 @@
      )
    }
  }
+=======
+    return (
+      <div className="center">
+        <p className="header-subtitle">Scan Guest Luggage to update status.</p>
+        <p></p>
+           <QrReader
+          ref='qrReader'
+          delay={this.state.delay}
+          style={previewStyle}
+          onError={this.handleError}
+          onScan={this.handleScan}
+          legacyMode
+        />
+        <img src="../assets/sampleQRCode.jpg" />
+        <br/>
+<button className="btn btn-default cta btn-primary-rivers btn-red" onClick={this.openImageDialog}> <span className="camIcon"></span><span className="btnText">Tap to Scan</span></button>
+
+
+      </div>
+    )
+  }
+}
+>>>>>>> 6c203e20fe655dd763f72cab46e9deaefae31351
 
  export default AdminQRScanner
