@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
-import V_logo_h_cruises_2x from'./images/V_logo_h_cruises_2x.png'
-// import 'bootstrap/dist/css/bootstrap.css'
-// import { Col } from 'react-bootstrap'
+import logo from './images/V_logo_h_cruises_2x.png'
 
 class Header extends React.Component {
 
@@ -12,7 +10,7 @@ class Header extends React.Component {
       <div className='trd-tablet-header-base'>
         <div className='header-base'>
           <div className='trd-header-logo'>
-            <img src={V_logo_h_cruises_2x} width="236" />
+            <img src={logo} width="236" />
           </div>
         </div>
 

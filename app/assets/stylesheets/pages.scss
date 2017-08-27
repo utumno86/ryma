@@ -182,13 +182,57 @@ h3 {
     margin-left:20px;
     display: inline-block;
 }
-.qrCode{
+p{
+        font-size: 16px;
+    letter-spacing: .025em;
+    margin: 0 0 10.5px;
 
+}
+.head-line {
+    position: relative;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 18px;
+    font-family: brandon-grotesque,Open Sans,Arial,Helvetica,Sans-Serif;
+    font-weight: 500;
+    font-size: 26px;
+    font-weight: 500;
 }
 .trd-footer-links-title-container {
    // border-bottom: 1px solid #e6e6e6;
     margin-bottom: 4px;
     margin-top: 30px;
+}
+.trd-status {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-color: #b10a32;
+    color: #fff;
+    font-size: 20px;
+}
+.lrg{
+    font-size: 20px;
+}
+hr{
+    width:70%;
+
+}
+h4{
+    color: #2b3d52;
+  
+}
+.copy-block-container {
+
+    padding: 40px;
+    z-index: 5;
+    border: 1px solid #b8af80;
+    border-top-width: 6px;
+    background: #fff;
+}
+.floatRight{
+    float:right;
 }
 .links-cell {
     display: block;

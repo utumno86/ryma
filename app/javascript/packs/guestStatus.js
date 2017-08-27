@@ -1,27 +1,56 @@
 import React, { Component } from 'react'
+<<<<<<< HEAD
 import PropTypes from 'prop-types'
 import footerIcons from './images/footer-icons.png'
+=======
+import StatusHeader from './status_header'
+import Footer from './footer'
+import footerIcons from './images/footer-icons.png'
+import camelImg from './images/lady_on_camel.jpg'
+import dawnImg from './images/Terrace_Dawn.jpg'
+>>>>>>> 8a50a230c06307594e97b9a306e950bdd4de28ca
 
 class GuestStatus extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
+    this.state = {
+      name: "Tyrion Lannister",
+      luggageStatus: "In Transit",
+    }
   }
-
-  static propTypes = { name: this.props.name };
-
   render () {
-
-
+    //var image_path = require()
     return (
       <div className='trd-tablet-header-base'>
+        <StatusHeader />
+        <br/>
+        <div className="head-line">Welcome aboard the Viking Ra, <br/> {this.state.name}!</div>
+             <div className="center lrg">Luggage Status is..<br/></div>
+             <div className="trd-status">
+                <strong>In Transit</strong>
+            </div><br/>
+                 <p className="center"><strong>Keep this page open</strong> your status will update automatically.</p>
+                 <br/>
+                  <hr/>
+        <h4> In the mean time...</h4>
 
-       <p>Welcome aboard the Viking Ra,
-           <br/>
-             Your luggage is being taken care of by our capable bell staff.  Keep this page open to track the status of your bags.</p>
-
-        <div className='center'>
-            <img src={footerIcons} width="320px"/>
+         <div className="copy-block-container">
+            <img src={dawnImg} /><br/>
+            <p>Join us in the Lounge and sample some great food and drinks while you enjoy the view on the open-air Acquavit Terrace</p>
+            <a href="" className="floatRight">Book a Tour</a>
         </div>
+        <div className="copy-block-container">
+            <img src={camelImg} /><br/>
+            <p>Head to the Nile’s west bank to visit the Valley of the Kings, where ancient pharaohs were entombed deep in the hillsides, and the Valley of the Queens, resting place of pharaohs’ wives.</p>
+            <a href="" className="floatRight">Book a Tour</a>
+        </div>
+        <div className="copy-block-container">
+            <iframe src="https://www.google.com/maps/d/u/2/embed?mid=1WG-bXCjOxg9NptUoVaQ9X6r-eNg" width="100%" height="480"></iframe><br/>
+            <p>Or plan some exploring on your own.  Here is a map of interesting sights and places to eat and drink.</p>
+
+        </div>
+
+        <Footer />
       </div>
 
     )
