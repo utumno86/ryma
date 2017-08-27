@@ -1,9 +1,14 @@
 import React, { Component } from 'react'
+<<<<<<< HEAD
+import PropTypes from 'prop-types'
+import footerIcons from './images/footer-icons.png'
+=======
 import StatusHeader from './status_header'
 import Footer from './footer'
 import footerIcons from './images/footer-icons.png'
 import camelImg from './images/lady_on_camel.jpg'
 import dawnImg from './images/Terrace_Dawn.jpg'
+>>>>>>> 8a50a230c06307594e97b9a306e950bdd4de28ca
 
 class GuestStatus extends React.Component {
   constructor(props) {
@@ -28,7 +33,7 @@ class GuestStatus extends React.Component {
                  <br/>
                   <hr/>
         <h4> In the mean time...</h4>
-       
+
          <div className="copy-block-container">
             <img src={dawnImg} /><br/>
             <p>Join us in the Lounge and sample some great food and drinks while you enjoy the view on the open-air Acquavit Terrace</p>
@@ -42,9 +47,9 @@ class GuestStatus extends React.Component {
         <div className="copy-block-container">
             <iframe src="https://www.google.com/maps/d/u/2/embed?mid=1WG-bXCjOxg9NptUoVaQ9X6r-eNg" width="100%" height="480"></iframe><br/>
             <p>Or plan some exploring on your own.  Here is a map of interesting sights and places to eat and drink.</p>
-           
+
         </div>
-       
+
         <Footer />
       </div>
 

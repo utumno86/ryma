@@ -1,8 +1,8 @@
-import React, { Component } from 'react'  
+import React, { Component } from 'react'
 import logo from './images/V_logo_h_cruises_2x.png'
 
 class Header extends React.Component {
-  
+
 
   render () {
     //var image_path = require()
