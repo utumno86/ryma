@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import qrReader from './qrReader'
+// import qrReader from './qrReader'
 import LegacyModeExample from './legacy_example'
 // import styles from './assets/stylesheets/pages'
 

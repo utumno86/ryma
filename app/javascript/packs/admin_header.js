@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import LegacyModeExample from './qr_guest_scan'
+import LegacyModeExample from './legacy_example'
 import V_logo_h_cruises_2x from'./images/V_logo_h_cruises_2x.png'
 class AdminHeader extends React.Component {
-  
+
   render () {
     //var image_path = require()
     return (
@@ -18,7 +18,7 @@ class AdminHeader extends React.Component {
             Staff Luggage Tracker
           </div>
         </div>
-        
+
       </div>
 
     )
