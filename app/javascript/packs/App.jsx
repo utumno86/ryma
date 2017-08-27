@@ -1,20 +1,22 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Header from './header'
+import GuestPage from './guest_page'
+import AdminPage from './admin_page'
 
-import LegacyModeExample from './legacy_example'
-import Footer from './footer'
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
+
 
 // import qrReader from './qrReader'
 // import styles from './assets/stylesheets/pages'
 
 document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(
-    <div>
-      <Header />
-      <LegacyModeExample />
-      <Footer />
-    </div>,
+    <BrowserRouter>
+      <Switch>
+        <Route exact path='/' component={GuestPage} />
+        <Route path='/admin' component={AdminPage} />
+      </Switch>
+    </BrowserRouter>,
     document.getElementById('main')
   )
 })
