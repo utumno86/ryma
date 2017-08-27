@@ -217,6 +217,7 @@ DEPENDENCIES
   puma (~> 3.7)
   rails (~> 5.1.3)
   react-bootstrap-rails
+  responders
   sass-rails (~> 5.0)
   selenium-webdriver
   sendgrid

@@ -1,9 +1,7 @@
-import React, { Component } from 'react'  
-// import 'bootstrap/dist/css/bootstrap.css'
-// import { Col } from 'react-bootstrap'
-
-class Header extends React.Component {
-  
+import React, { Component } from 'react'
+import LegacyModeExample from './legacy_example'
+import V_logo_h_cruises_2x from'./images/V_logo_h_cruises_2x.png'
+class AdminHeader extends React.Component {
 
   render () {
     //var image_path = require()
@@ -11,19 +9,20 @@ class Header extends React.Component {
       <div className='trd-tablet-header-base'>
         <div className='header-base'>
           <div className='trd-header-logo'>
-            <img src='../assets/V_logo_h_cruises_2x.png' width="236" />
+            <img src={V_logo_h_cruises_2x} width="236" />
           </div>
         </div>
 
         <div className='center'>
           <div className='title cruise-hdr-details'>
-            Luggage Tracker
+            Staff Luggage Tracker
           </div>
         </div>
+
       </div>
 
     )
   }
 }
 
-export default Header
+export default AdminHeader

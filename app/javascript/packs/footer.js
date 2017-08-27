@@ -1,4 +1,5 @@
 import React, { Component } from 'react'  
+import footerIcons from './images/footer-icons.png'
 
 class Footer extends React.Component {
   
@@ -13,7 +14,7 @@ class Footer extends React.Component {
 				</div>
 
         <div className='center'>
-            <img src="../assets/footer-icons.png" width="320px"/>
+            <img src={footerIcons} width="320px"/>
         </div>
       </div>
 
