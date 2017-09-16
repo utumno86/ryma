@@ -5,7 +5,7 @@ class PagesController < ApplicationController
   def admin
   end
 
-  def guest
-    # this will eventually be one that is generated with each qrcode
-  end
+  # def guest
+  #   # this will eventually be one that is generated with each qrcode
+  # end
 end

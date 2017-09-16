@@ -9,8 +9,9 @@ class GuestStatus extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      name: 'Tyrion Lannister',
-      luggageStatus: 'In Transit'
+      name: '',
+      reservation: '',
+      luggageStatus: 'Delivered'
     }
   }
   render () {
@@ -29,7 +30,7 @@ class GuestStatus extends React.Component {
           <br />
         </div>
         <div className='trd-status'>
-          <strong> In Transit </strong>
+          <strong> {this.state.luggageStatus} </strong>
         </div>
         <br />
         <p className='center'>

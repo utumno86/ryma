@@ -14,11 +14,16 @@ class LegacyModeExample extends Component {
   }
   handleScan (result) {
     if (result) {
-      // this.setState({ result })
-      const id = 'q3dbsd'
+      this.setState({ result })
+      const id = (result)
       this.props.history.push('/guest/' + id)
     }
   }
+  // handleScan (data) {
+  //   this.setState({
+  //     result: data
+  //   })
+  // }
 
   handleError (err) {
     console.error(err)
@@ -48,13 +53,12 @@ class LegacyModeExample extends Component {
           legacyMode
         />
         <img src={SampleQRC} />
+        <p>{this.state.result}</p>
         <br />
         <button className='btn btn-default cta btn-primary-rivers btn-red' onClick={this.openImageDialog}>
           <span className='camIcon' />
           <span className='btnText'>Tap to Scan</span>
         </button>
-
-
       </div>
     )
   }
