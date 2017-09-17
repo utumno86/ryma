@@ -4,21 +4,26 @@ import Footer from './footer'
 // import footerIcons from './images/footer-icons.png'
 import camelImg from '../images/lady_on_camel.jpg'
 import dawnImg from '../images/Terrace_Dawn.jpg'
+import jsonFetch from 'json-fetch'
 
 class GuestStatus extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
       name: '',
-      reservation: '',
-      luggageStatus: 'Delivered',
-      id: this.props.match.params.id
+      reservation: this.props.match.params.id,
+      luggageStatus: ''
+      // id: this.props.match.params.id
     }
+    jsonFetch('/api/guests/' + this.state.reservation, {
+      method: 'GET'
+    })
+    .then(response => this.setState({ books: response.body, authors: [null].concat(this.authors(response.body)) }))
+    .catch(err => console.log(err.name, err.message))
   }
 
   render () {
     // this.props.match.params.id
-    //var image_path = require()
     return (
       <div className='trd-tablet-header-base'>
         <StatusHeader />
@@ -26,7 +31,7 @@ class GuestStatus extends React.Component {
         <div className='head-line'>Welcome aboard the Viking Ra,
           <br />
           {this.state.name}!
-          {this.state.id}
+          {this.state.reservation}
         </div>
         <div className='center lrg'>
           Luggage Status is..
@@ -56,7 +61,7 @@ class GuestStatus extends React.Component {
           <a href='' className='floatRight'>Book a Tour</a>
         </div>
         <div className='copy-block-container'>
-          <iframe src='https://www.google.com/maps/d/u/2/embed?mid=1WG-bXCjOxg9NptUoVaQ9X6r-eNg' width='100%' height='480'></iframe>
+          <iframe src='https://www.google.com/maps/d/u/2/embed?mid=1WG-bXCjOxg9NptUoVaQ9X6r-eNg' width='100%' height='480' />
           <br />
           <p>Or plan some exploring on your own.  Here is a map of interesting sights and places to eat and drink.</p>
         </div>

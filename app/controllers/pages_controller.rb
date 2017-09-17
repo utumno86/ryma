@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
   def index
+    # @guest = Guest.all.includes(:guests, :baggages)
   end
 
   def admin
