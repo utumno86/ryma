@@ -17,14 +17,7 @@ class GuestStatus extends React.Component {
   }
 
   componentDidMount () {
-    $.ajax({
-      url: '/api/guests',
-      type: 'GET',
-      data: {item:{reservation: id}}
-      // success: (item) => {
-      //   this.props.handleSubmit(item)
-      // }
-    })
+    $.getJSON('/api/v1/items.json', (response) => { this.setState({ items: response }) })
   }
 
   render () {

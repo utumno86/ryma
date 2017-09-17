@@ -8,5 +8,10 @@
 // layout file, like app/views/layouts/application.html.erb
 
 //= require react_bootstrap
+//= require rails-ujs
+//= require jquery
+//= require turbolinks
+//= require_tree .
 
-console.log('Hello World from Webpacker')
+// 
+// console.log('Hello World from Webpacker')
