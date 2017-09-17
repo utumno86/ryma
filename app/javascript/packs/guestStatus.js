@@ -11,9 +11,11 @@ class GuestStatus extends React.Component {
     this.state = {
       name: '',
       reservation: '',
-      luggageStatus: 'Delivered'
+      luggageStatus: 'Delivered',
+      id: this.props.match.params.id
     }
   }
+
   render () {
     // this.props.match.params.id
     //var image_path = require()
@@ -24,13 +26,14 @@ class GuestStatus extends React.Component {
         <div className='head-line'>Welcome aboard the Viking Ra,
           <br />
           {this.state.name}!
+          {this.state.id}
         </div>
         <div className='center lrg'>
           Luggage Status is..
           <br />
         </div>
         <div className='trd-status'>
-          <strong> {this.state.luggageStatus} </strong>
+          {/* <strong> {this.state.luggageStatus} </strong> */}
         </div>
         <br />
         <p className='center'>

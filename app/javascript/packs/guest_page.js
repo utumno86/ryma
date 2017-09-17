@@ -4,7 +4,6 @@ import Header from './header'
 import Footer from './footer'
 
 class GuestPage extends React.Component {
-
   render () {
     //var image_path = require()
     return (
