@@ -2,17 +2,20 @@ import React, { Component } from 'react'
 import StatusHeader from './status_header'
 import Footer from './footer'
 // import footerIcons from './images/footer-icons.png'
-import camelImg from './images/lady_on_camel.jpg'
-import dawnImg from './images/Terrace_Dawn.jpg'
+import camelImg from '../images/lady_on_camel.jpg'
+import dawnImg from '../images/Terrace_Dawn.jpg'
 
 class GuestStatus extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      name: 'Tyrion Lannister',
-      luggageStatus: 'In Transit'
+      name: '',
+      reservation: '',
+      luggageStatus: 'Delivered',
+      id: this.props.match.params.id
     }
   }
+
   render () {
     // this.props.match.params.id
     //var image_path = require()
@@ -23,13 +26,14 @@ class GuestStatus extends React.Component {
         <div className='head-line'>Welcome aboard the Viking Ra,
           <br />
           {this.state.name}!
+          {this.state.id}
         </div>
         <div className='center lrg'>
           Luggage Status is..
           <br />
         </div>
         <div className='trd-status'>
-          <strong> In Transit </strong>
+          {/* <strong> {this.state.luggageStatus} </strong> */}
         </div>
         <br />
         <p className='center'>

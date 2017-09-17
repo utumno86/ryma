@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import QrReader from 'react-qr-reader'
-import SampleQRC from './images/sampleQRCode.jpg'
+import SampleQRC from '../images/sampleQRCode.jpg'
 // import StaffResponse from 'staff_response'
 
 class LegacyModeExample extends Component {
@@ -54,8 +54,6 @@ class LegacyModeExample extends Component {
           <span className='camIcon' />
           <span className='btnText'>Tap to Scan</span>
         </button>
-
-
       </div>
     )
   }

@@ -1,22 +1,24 @@
 import React, { Component } from 'react'
 import QrReader from 'react-qr-reader'
-import SampleQRC from './images/sampleQRCode.jpg'
+import QRimg from '../images/sampleQRCode.jpg'
+import StaffResponse from './staff_response'
 
-class LegacyModeExample extends Component {
+class AdminQRScanner extends Component {
   constructor (props) {
     super(props)
     this.state = {
       delay: 100,
-      result: ''
+      result: '',
+      message: 'Bag Status is now Delivered'
     }
     this.handleScan = this.handleScan.bind(this)
     this.openImageDialog = this.openImageDialog.bind(this)
   }
+
   handleScan (result) {
     if (result) {
-      // this.setState({ result })
-      const id = 'q3dbsd'
-      this.props.history.push('/guest/' + id)
+      this.setState({ result })
+      return <StaffResponse />
     }
   }
 
@@ -34,11 +36,11 @@ class LegacyModeExample extends Component {
       width: 0,
       backgroundSize: '100% auto'
     }
-
     return (
       <div className='center'>
-        <p className='header-subtitle'>Take a picture of your luggage code.</p>
-        <p>Please scan your luggage QR Code with your phone and we will send a notification when your luggage arrives in your stateroom.</p>
+        <p className='header-subtitle'>
+          Scan Guest Luggage to update status.
+        </p>
         <QrReader
           ref='qrReader'
           delay={this.state.delay}
@@ -47,17 +49,17 @@ class LegacyModeExample extends Component {
           onScan={this.handleScan}
           legacyMode
         />
-        <img src={SampleQRC} />
+        <img src={QRimg} />
         <br />
         <button className='btn btn-default cta btn-primary-rivers btn-red' onClick={this.openImageDialog}>
           <span className='camIcon' />
-          <span className='btnText'>Tap to Scan</span>
+          <span className='btnText'>
+            Tap to Scan
+          </span>
         </button>
-
-
       </div>
     )
   }
 }
 
-export default LegacyModeExample
+export default AdminQRScanner
