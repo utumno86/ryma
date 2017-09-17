@@ -10,16 +10,28 @@ class GuestStatus extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      name: '',
       reservation: this.props.match.params.id,
-      luggageStatus: ''
-      // id: this.props.match.params.id
+      first: '',
+      last: '',
+      room: '',
+      bagstatus: false
     }
-    jsonFetch('/api/guests/' + this.state.reservation, {
+    jsonFetch('/api/guests/' + this.state.reservation + '.json', {
       method: 'GET'
     })
-    .then(response => this.setState({ books: response.body, authors: [null].concat(this.authors(response.body)) }))
+    .then(response => this.setState({ first: response.body.first, last: response.body.last, room: response.body.roomnumber, bagstatus: response.body.bagstatus }))
     .catch(err => console.log(err.name, err.message))
+
+  //   luggage () {
+  //     if (this.state.bagstatus === true) {
+  //       console.log('delivered')
+  //       this.updateState({
+  //         bagstatus: true
+  //       })
+  //     } else {
+  //       console.log('in transit')
+  //     }
+  //   }
   }
 
   render () {
@@ -27,17 +39,20 @@ class GuestStatus extends React.Component {
       <div className='trd-tablet-header-base'>
         <StatusHeader />
         <br />
-        <div className='head-line'>Welcome aboard the Viking Ra,
+        <div className='head-line text-center'>Welcome aboard the Viking Ra,
           <br />
-          {this.state.name}!
-          {this.state.reservation}
+          {this.state.first} {this.state.last}!
+          <br />
+          Reservation number: {this.state.reservation}
+          <br />
+          Room number: {this.state.room}
         </div>
         <div className='center lrg'>
           Luggage Status is..
           <br />
         </div>
         <div className='trd-status'>
-          {/* <strong> {this.state.luggageStatus} </strong> */}
+          <strong> {this.state.bagstatus} </strong>
         </div>
         <br />
         <p className='center'>
