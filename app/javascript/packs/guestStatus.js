@@ -16,6 +16,17 @@ class GuestStatus extends React.Component {
     }
   }
 
+  componentDidMount () {
+    $.ajax({
+      url: '/api/guests',
+      type: 'GET',
+      data: {item:{reservation: id}}
+      // success: (item) => {
+      //   this.props.handleSubmit(item)
+      // }
+    })
+  }
+
   render () {
     // this.props.match.params.id
     //var image_path = require()
