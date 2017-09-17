@@ -23,7 +23,6 @@ class GuestStatus extends React.Component {
   }
 
   render () {
-    // this.props.match.params.id
     return (
       <div className='trd-tablet-header-base'>
         <StatusHeader />
