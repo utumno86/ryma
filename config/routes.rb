@@ -3,8 +3,7 @@ Rails.application.routes.draw do
   root 'pages#index'
   get 'admin', to: 'pages#admin', as: :admin
 
-  get 'guest', to: 'guest#show'
-  # , as: :guest
+  get 'guest', to: 'guest#show', as: :guest
 
   namespace :api do
     resources :guests

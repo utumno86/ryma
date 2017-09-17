@@ -1,8 +1,8 @@
-import React, { Component } from 'react'  
-import logo from './images/V_logo_h_cruises_2x.png'
+import React, { Component } from 'react'
+import logo from '../images/V_logo_h_cruises_2x.png'
 
-class StatusHeader extends React.Component {
-  
+class Header extends React.Component {
+
 
   render () {
     //var image_path = require()
@@ -16,7 +16,7 @@ class StatusHeader extends React.Component {
 
         <div className='center'>
           <div className='title cruise-hdr-details'>
-            Luggage Status
+            Luggage Tracker
           </div>
         </div>
       </div>
@@ -25,4 +25,4 @@ class StatusHeader extends React.Component {
   }
 }
 
-export default StatusHeader
+export default Header

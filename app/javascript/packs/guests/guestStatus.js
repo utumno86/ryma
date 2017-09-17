@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import StatusHeader from './status_header'
 import Footer from './footer'
 // import footerIcons from './images/footer-icons.png'
-import camelImg from './images/lady_on_camel.jpg'
-import dawnImg from './images/Terrace_Dawn.jpg'
+import camelImg from '../images/lady_on_camel.jpg'
+import dawnImg from '../images/Terrace_Dawn.jpg'
 
 class GuestStatus extends React.Component {
   constructor (props) {
@@ -14,10 +14,6 @@ class GuestStatus extends React.Component {
       luggageStatus: 'Delivered',
       id: this.props.match.params.id
     }
-  }
-
-  componentDidMount () {
-    $.getJSON('/api/v1/items.json', (response) => { this.setState({ items: response }) })
   }
 
   render () {

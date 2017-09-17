@@ -1,9 +1,9 @@
- import React, { Component } from 'react'
- import QrReader from 'react-qr-reader'
- import QRimg from'./images/sampleQRCode.jpg'
- import StaffResponse from './staff_response'
+import React, { Component } from 'react'
+import QrReader from 'react-qr-reader'
+import QRimg from '../images/sampleQRCode.jpg'
+import StaffResponse from './staff_response'
 
- class AdminQRScanner extends Component {
+class AdminQRScanner extends Component {
   constructor (props) {
     super(props)
     this.state = {
@@ -14,10 +14,11 @@
     this.handleScan = this.handleScan.bind(this)
     this.openImageDialog = this.openImageDialog.bind(this)
   }
+
   handleScan (result) {
     if (result) {
       this.setState({ result })
-      return <StaffResponse />;
+      return <StaffResponse />
     }
   }
 
@@ -36,10 +37,11 @@
       backgroundSize: '100% auto'
     }
     return (
-      <div className="center">
-        <p className="header-subtitle">Scan Guest Luggage to update status.</p>
-        <p></p>
-           <QrReader
+      <div className='center'>
+        <p className='header-subtitle'>
+          Scan Guest Luggage to update status.
+        </p>
+        <QrReader
           ref='qrReader'
           delay={this.state.delay}
           style={previewStyle}
@@ -48,14 +50,16 @@
           legacyMode
         />
         <img src={QRimg} />
-        <br/>
-        <button className="btn btn-default cta btn-primary-rivers btn-red" onClick={this.openImageDialog}> <span className="camIcon"></span><span className="btnText">Tap to Scan</span></button>
-
-
+        <br />
+        <button className='btn btn-default cta btn-primary-rivers btn-red' onClick={this.openImageDialog}>
+          <span className='camIcon' />
+          <span className='btnText'>
+            Tap to Scan
+          </span>
+        </button>
       </div>
     )
   }
 }
 
-
- export default AdminQRScanner
+export default AdminQRScanner

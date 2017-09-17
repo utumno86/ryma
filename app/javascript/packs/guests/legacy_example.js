@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import QrReader from 'react-qr-reader'
-import SampleQRC from './images/sampleQRCode.jpg'
+import SampleQRC from '../images/sampleQRCode.jpg'
 
 class LegacyModeExample extends Component {
   constructor (props) {

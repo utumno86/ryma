@@ -1,28 +1,26 @@
 import React, { Component } from 'react'
-import logo from './images/V_logo_h_cruises_2x.png'
-
-class Header extends React.Component {
-
+import logo from '../images/V_logo_h_cruises_2x.png'
+class AdminHeader extends React.Component {
 
   render () {
-    //var image_path = require()
     return (
       <div className='trd-tablet-header-base'>
         <div className='header-base'>
           <div className='trd-header-logo'>
-            <img src={logo} width="236" />
+            <img src={logo} width='236' />
           </div>
         </div>
 
         <div className='center'>
           <div className='title cruise-hdr-details'>
-            Luggage Tracker
+            Staff Luggage Tracker
           </div>
         </div>
+
       </div>
 
     )
   }
 }
 
-export default Header
+export default AdminHeader
