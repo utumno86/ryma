@@ -4,7 +4,6 @@ import footerIcons from '../images/footer-icons.png'
 class Footer extends React.Component {
 
   render () {
-    //var image_path = require()
     return (
       <div className='trd-tablet-header-base'>
         <div className='trd-footer-links-title-container'>

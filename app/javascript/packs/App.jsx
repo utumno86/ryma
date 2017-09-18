@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import GuestPage from './guests/guest_page'
 import AdminPage from './admin/admin_page'
 import GuestStatus from './guests/guestStatus'
-import StaffResponse from './admin/staff_response'
+// import AdminStatus from './admin/admin_status'
 // import Fetch from 'react-fetch'
 // import GuestWrapper from './guest_wrapper'
 
@@ -17,11 +17,9 @@ document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(
     <BrowserRouter>
       <Switch>
-        {/* <Route exact path='/' component={GuestWrapper} /> */}
         <Route exact path='/' component={GuestPage} />
         <Route path='/admin' component={AdminPage} />
         <Route path='/guest/:id' component={GuestStatus} />
-        <Route path='/staff_response' component={StaffResponse} />
       </Switch>
     </BrowserRouter>,
     document.getElementById('main')

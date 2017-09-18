@@ -4,6 +4,8 @@ class PagesController < ApplicationController
   end
 
   def admin
+    def show
+    end
   end
 
   # def guest

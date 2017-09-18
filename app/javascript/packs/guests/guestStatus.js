@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import StatusHeader from './status_header'
 import Footer from './footer'
+import GuestBags from './guestBags'
 // import footerIcons from './images/footer-icons.png'
 import camelImg from '../images/lady_on_camel.jpg'
 import dawnImg from '../images/Terrace_Dawn.jpg'
@@ -14,24 +15,13 @@ class GuestStatus extends React.Component {
       first: '',
       last: '',
       room: '',
-      bagstatus: false
+      bags: false
     }
     jsonFetch('/api/guests/' + this.state.reservation + '.json', {
       method: 'GET'
     })
-    .then(response => this.setState({ first: response.body.first, last: response.body.last, room: response.body.roomnumber, bagstatus: response.body.bagstatus }))
+    .then(response => this.setState({ first: response.body.first, last: response.body.last, room: response.body.roomnumber, bags: response.body.bagstatus }))
     .catch(err => console.log(err.name, err.message))
-
-  //   luggage () {
-  //     if (this.state.bagstatus === true) {
-  //       console.log('delivered')
-  //       this.updateState({
-  //         bagstatus: true
-  //       })
-  //     } else {
-  //       console.log('in transit')
-  //     }
-  //   }
   }
 
   render () {
@@ -43,17 +33,15 @@ class GuestStatus extends React.Component {
           <br />
           {this.state.first} {this.state.last}!
           <br />
-          Reservation number: {this.state.reservation}
-          <br />
+          {/* Reservation number: {this.state.reservation}
+          <br /> */}
           Room number: {this.state.room}
         </div>
         <div className='center lrg'>
           Luggage Status is..
           <br />
         </div>
-        <div className='trd-status'>
-          <strong> {this.state.bagstatus} </strong>
-        </div>
+        <GuestBags />
         <br />
         <p className='center'>
           <strong>Keep this page open </strong> your status will update automatically.
