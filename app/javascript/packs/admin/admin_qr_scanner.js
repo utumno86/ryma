@@ -1,23 +1,25 @@
 import React, { Component } from 'react'
 import QrReader from 'react-qr-reader'
 import SampleQRC from '../images/sampleQRCode.jpg'
-// import StaffResponse from 'staff_response'
+import AdminStatus from './admin_status'
 
-class LegacyModeExample extends Component {
+class AdminQRScanner extends Component {
   constructor (props) {
     super(props)
     this.state = {
       delay: 100,
-      result: ''
+      result: '',
+      message: 'Bag Status is now Delievered'
     }
     this.handleScan = this.handleScan.bind(this)
     this.openImageDialog = this.openImageDialog.bind(this)
   }
   handleScan (result) {
     if (result) {
-      // this.setState({ result })
-      // const id = 'q3dbsd'
-      this.props.history.push('/staff_response')
+      this.setState({ result })
+      return <AdminStatus />
+      // this.props.history.push('/admin/' + result,
+      // {id: result})
     }
   }
 
@@ -49,6 +51,7 @@ class LegacyModeExample extends Component {
           legacyMode
         />
         <img src={SampleQRC} />
+        <p>{this.state.result}</p>
         <br />
         <button className='btn btn-default cta btn-primary-rivers btn-red' onClick={this.openImageDialog}>
           <span className='camIcon' />
@@ -59,4 +62,4 @@ class LegacyModeExample extends Component {
   }
 }
 
-export default LegacyModeExample
+export default AdminQRScanner

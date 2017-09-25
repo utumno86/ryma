@@ -38,7 +38,7 @@
   },
   "devDependencies": {
     "jquery": "^3.2.1",
-    "react-fetch": "0.0.9",
+    "json-fetch": "^7.2.3",
     "react-qr-reader": "^1.2.1",
     "react-router-dom": "^4.2.2",
     "webpack-dev-server": "^2.7.1",

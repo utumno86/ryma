@@ -1,40 +1,47 @@
 import React, { Component } from 'react'
 import StatusHeader from './status_header'
 import Footer from './footer'
+import GuestBags from './guestBags'
 // import footerIcons from './images/footer-icons.png'
 import camelImg from '../images/lady_on_camel.jpg'
 import dawnImg from '../images/Terrace_Dawn.jpg'
+import jsonFetch from 'json-fetch'
 
 class GuestStatus extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      name: '',
-      reservation: '',
-      luggageStatus: 'Delivered',
-      id: this.props.match.params.id
+      reservation: this.props.match.params.id,
+      first: '',
+      last: '',
+      room: '',
+      bags: false
     }
+    jsonFetch('/api/guests/' + this.state.reservation + '.json', {
+      method: 'GET'
+    })
+    .then(response => this.setState({ first: response.body.first, last: response.body.last, room: response.body.roomnumber, bags: response.body.bagstatus }))
+    .catch(err => console.log(err.name, err.message))
   }
 
   render () {
-    // this.props.match.params.id
-    //var image_path = require()
     return (
       <div className='trd-tablet-header-base'>
         <StatusHeader />
         <br />
-        <div className='head-line'>Welcome aboard the Viking Ra,
+        <div className='head-line text-center'>Welcome aboard the Viking Ra,
           <br />
-          {this.state.name}!
-          {this.state.id}
+          {this.state.first} {this.state.last}!
+          <br />
+          {/* Reservation number: {this.state.reservation}
+          <br /> */}
+          Room number: {this.state.room}
         </div>
         <div className='center lrg'>
           Luggage Status is..
           <br />
         </div>
-        <div className='trd-status'>
-          {/* <strong> {this.state.luggageStatus} </strong> */}
-        </div>
+        <GuestBags />
         <br />
         <p className='center'>
           <strong>Keep this page open </strong> your status will update automatically.
@@ -56,7 +63,7 @@ class GuestStatus extends React.Component {
           <a href='' className='floatRight'>Book a Tour</a>
         </div>
         <div className='copy-block-container'>
-          <iframe src='https://www.google.com/maps/d/u/2/embed?mid=1WG-bXCjOxg9NptUoVaQ9X6r-eNg' width='100%' height='480'></iframe>
+          <iframe src='https://www.google.com/maps/d/u/2/embed?mid=1WG-bXCjOxg9NptUoVaQ9X6r-eNg' width='100%' height='480' />
           <br />
           <p>Or plan some exploring on your own.  Here is a map of interesting sights and places to eat and drink.</p>
         </div>

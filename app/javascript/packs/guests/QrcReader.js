@@ -1,24 +1,22 @@
 import React, { Component } from 'react'
 import QrReader from 'react-qr-reader'
-import QRimg from '../images/sampleQRCode.jpg'
-import StaffResponse from './staff_response'
+import SampleQRC from '../images/sampleQRCode.jpg'
 
-class AdminQRScanner extends Component {
+class QrcReader extends Component {
   constructor (props) {
     super(props)
     this.state = {
       delay: 100,
-      result: '',
-      message: 'Bag Status is now Delivered'
+      result: ''
     }
     this.handleScan = this.handleScan.bind(this)
     this.openImageDialog = this.openImageDialog.bind(this)
   }
-
   handleScan (result) {
     if (result) {
       this.setState({ result })
-      return <StaffResponse />
+      // const id = (result)
+      this.props.history.push('/guest/' + result, {id: result})
     }
   }
 
@@ -36,11 +34,11 @@ class AdminQRScanner extends Component {
       width: 0,
       backgroundSize: '100% auto'
     }
+
     return (
       <div className='center'>
-        <p className='header-subtitle'>
-          Scan Guest Luggage to update status.
-        </p>
+        <p className='header-subtitle'>Take a picture of your luggage code.</p>
+        <p>Please scan your luggage QR Code with your phone and we will send a notification when your luggage arrives in your stateroom.</p>
         <QrReader
           ref='qrReader'
           delay={this.state.delay}
@@ -49,17 +47,16 @@ class AdminQRScanner extends Component {
           onScan={this.handleScan}
           legacyMode
         />
-        <img src={QRimg} />
+        <img src={SampleQRC} />
+        {/* <p>{this.state.result}</p> */}
         <br />
         <button className='btn btn-default cta btn-primary-rivers btn-red' onClick={this.openImageDialog}>
           <span className='camIcon' />
-          <span className='btnText'>
-            Tap to Scan
-          </span>
+          <span className='btnText'>Tap to Scan</span>
         </button>
       </div>
     )
   }
 }
 
-export default AdminQRScanner
+export default QrcReader

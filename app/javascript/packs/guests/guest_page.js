@@ -1,15 +1,14 @@
 import React, { Component } from 'react'
-import LegacyModeExample from './legacy_example'
+import QrcReader from './QrcReader'
 import Header from './header'
 import Footer from './footer'
 
 class GuestPage extends React.Component {
   render () {
-    //var image_path = require()
     return (
       <div className='trd-tablet-header-base'>
         <Header />
-        <LegacyModeExample history={this.props.history} />
+        <QrcReader history={this.props.history} />
         <Footer />
       </div>
 
