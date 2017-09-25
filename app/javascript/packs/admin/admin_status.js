@@ -14,7 +14,7 @@ class AdminStatus extends React.Component {
       bags: true
     }
     jsonFetch('/api/guests/' + this.state.reservation + '.json', {
-      method: 'GET'
+      method: 'PATCH'
     })
     .then(response => this.setState({ first: response.body.first, last: response.body.last, room: response.body.roomnumber, bags: response.body.bagstatus }))
     .catch(err => console.log(err.name, err.message))

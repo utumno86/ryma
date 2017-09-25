@@ -1,4 +1,5 @@
 class Api::GuestsController < Api::BaseController
+
   def index
   end
   def show
