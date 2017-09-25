@@ -1,15 +1,15 @@
 import React, { Component } from 'react'
 import QrReader from 'react-qr-reader'
 import SampleQRC from '../images/sampleQRCode.jpg'
-import AdminStatus from './admin_status'
+// import AdminStatus from './admin_status'
 
 class AdminQRScanner extends Component {
   constructor (props) {
     super(props)
     this.state = {
       delay: 100,
-      result: '',
-      message: 'Bag Status is now Delievered'
+      result: ''
+      // message: 'Bag Status is now Delievered'
     }
     this.handleScan = this.handleScan.bind(this)
     this.openImageDialog = this.openImageDialog.bind(this)
@@ -17,9 +17,7 @@ class AdminQRScanner extends Component {
   handleScan (result) {
     if (result) {
       this.setState({ result })
-      return <AdminStatus />
-      // this.props.history.push('/admin/' + result,
-      // {id: result})
+      this.props.history.push('/admin-status/' + result, {id: result})
     }
   }
 
@@ -51,7 +49,9 @@ class AdminQRScanner extends Component {
           legacyMode
         />
         <img src={SampleQRC} />
-        <p>{this.state.result}</p>
+        <p>
+          {this.state.result}
+        </p>
         <br />
         <button className='btn btn-default cta btn-primary-rivers btn-red' onClick={this.openImageDialog}>
           <span className='camIcon' />

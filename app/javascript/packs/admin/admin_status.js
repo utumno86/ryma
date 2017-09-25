@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import AdminHeader from './admin_header'
+import { Link } from 'react-router'
 import jsonFetch from 'json-fetch'
 
-class AdminStatus extends Component {
+class AdminStatus extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
@@ -10,7 +11,7 @@ class AdminStatus extends Component {
       first: '',
       last: '',
       room: '',
-      bags: false
+      bags: true
     }
     jsonFetch('/api/guests/' + this.state.reservation + '.json', {
       method: 'GET'
@@ -23,13 +24,20 @@ class AdminStatus extends Component {
     return (
       <div className='trd-tablet-header-base center'>
         <AdminHeader />
-        <h3 className='center'> Passenger {this.state.first} {this.state.last} bag status updated to
+        <h4 className='center'>
+          Reservation: {this.state.reservation}
           <br />
-          <strong>DELIVERED</strong>
-        </h3>
-        <button className='btn btn-default cta btn-primary-rivers btn-red'>
-          {/* <span className='camIcon' /> */}
-          <span className='btnText'>Next Reservation</span>
+          Passenger: {this.state.first} {this.state.last}
+          <br />
+          Room: {this.state.room}
+          <br />
+          <strong>BAGS DELIVERED</strong>
+        </h4>
+        <button className='btn btn-default cta btn-primary-rivers btn-red' >
+          <a href='/admin' >
+            <span className='camIcon' />
+            <span className='btnText'>Next Reservation</span>
+          </a>
         </button>
       </div>
     )
