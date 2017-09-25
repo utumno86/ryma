@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   root 'pages#index'
   get 'admin', to: 'pages#admin', as: :admin
+  # resources :admin
 
   get 'guest', to: 'guest#show', as: :guest
 

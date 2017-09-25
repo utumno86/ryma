@@ -16,7 +16,7 @@ class QrcReader extends Component {
     if (result) {
       this.setState({ result })
       // const id = (result)
-      this.props.history.push('/guest/' + result, {id: result})
+      this.props.history.push('/guests/' + result, {id: result})
     }
   }
 
