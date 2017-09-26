@@ -2792,9 +2792,9 @@ jsprim@^1.2.2:
     json-schema "0.2.3"
     verror "1.10.0"
 
-"jsqr@git+https://github.com/JodusNodus/jsQR.git":
+"jsqr@https://github.com/JodusNodus/jsQR.git":
   version "0.2.2"
-  resolved "git+https://github.com/JodusNodus/jsQR.git#5ba1acefa1cbb9b2bc92b49f503f2674e2ec212b"
+  resolved "https://github.com/JodusNodus/jsQR.git#5ba1acefa1cbb9b2bc92b49f503f2674e2ec212b"
 
 keycode@^2.1.2:
   version "2.1.9"
@@ -5135,6 +5135,10 @@ uglifyjs-webpack-plugin@^0.4.6:
     source-map "^0.5.6"
     uglify-js "^2.8.29"
     webpack-sources "^1.0.1"
+
+uglifyjs@^2.4.11:
+  version "2.4.11"
+  resolved "https://registry.yarnpkg.com/uglifyjs/-/uglifyjs-2.4.11.tgz#3440d64e045759589524418eb641c68bb90d113e"
 
 uid-number@^0.0.6:
   version "0.0.6"
