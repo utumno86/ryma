@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
+import jsonFetch from 'json-fetch'
 
 class GuestBags extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      bags: false
+      bags: false,
+      reservation: this.props.match.params.id
     }
   }
 
@@ -13,6 +15,17 @@ class GuestBags extends React.Component {
       this.setState({ bags: event.currentTarget.value })
     }
   }
+
+  // componentDidMount () {
+  //   setInterval(() => this.setState(
+  //     jsonFetch('/api/guests/' + this.state.reservation + '.json', {
+  //       method: 'GET'
+  //     })
+  //     .then(response => this.setState({ bags: response.body.bagstatus }))
+  //     .catch(err => console.log(err.name, err.message))), 10000)
+  //   console.log('mounted')
+  //   console.log(this.state.bags)
+  // }
 
   render () {
     return (

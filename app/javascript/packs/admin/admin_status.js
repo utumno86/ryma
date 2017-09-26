@@ -24,7 +24,7 @@ class AdminStatus extends React.Component {
     return (
       <div className='trd-tablet-header-base center'>
         <AdminHeader />
-        <h4 className='center'>
+        <h3 className='center'>
           Reservation: {this.state.reservation}
           <br />
           Passenger: {this.state.first} {this.state.last}
@@ -32,7 +32,7 @@ class AdminStatus extends React.Component {
           Room: {this.state.room}
           <br />
           <strong>BAGS DELIVERED</strong>
-        </h4>
+        </h3>
         <button className='btn btn-default cta btn-primary-rivers btn-red' >
           <a href='/admin' >
             <span className='camIcon' />
