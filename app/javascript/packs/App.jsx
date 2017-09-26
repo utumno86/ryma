@@ -13,7 +13,6 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 // import styles from './assets/stylesheets/pages'
 
 document.addEventListener('DOMContentLoaded', () => {
-
   ReactDOM.render(
     <BrowserRouter>
       <Switch>

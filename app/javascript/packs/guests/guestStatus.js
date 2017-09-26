@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import StatusHeader from './status_header'
 import Footer from './footer'
-// import GuestBags from './guestBags'
-// import footerIcons from './images/footer-icons.png'
 import camelImg from '../images/lady_on_camel.jpg'
 import dawnImg from '../images/Terrace_Dawn.jpg'
 import jsonFetch from 'json-fetch'
@@ -60,17 +58,10 @@ class GuestStatus extends React.Component {
           Luggage Status is..
           <br />
         </div>
-        {/* <GuestBags /> */}
         <div className='guest-bag-status' onChange={() => this.handleChange()}>
           { this.state.bags === true ? <div className='trd-delivered'><strong> Delivered</strong></div> : <div className='trd-status'><strong> In Transit</strong></div>
           }
         </div>
-        {/* <div className='trd-status'
-          onChange={() => this.handleChange()}>
-          <strong>
-            {this.state.bags === true ? 'Delivered' : 'In Transit'}
-          </strong>
-        </div> */}
         <br />
         <p className='center'>
           <strong>Keep this page open </strong> your status will update automatically.

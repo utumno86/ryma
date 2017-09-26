@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import AdminHeader from './admin_header'
-import { Link } from 'react-router'
 import jsonFetch from 'json-fetch'
 
 class AdminStatus extends React.Component {
