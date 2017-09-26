@@ -5,7 +5,7 @@ import camelImg from '../images/lady_on_camel.jpg'
 import dawnImg from '../images/Terrace_Dawn.jpg'
 import jsonFetch from 'json-fetch'
 
-class GuestStatus extends React.Component {
+class GuestStatus extends Component {
   constructor (props) {
     super(props)
     this.state = {

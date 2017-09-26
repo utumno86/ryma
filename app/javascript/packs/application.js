@@ -11,7 +11,4 @@
 //= require rails-ujs
 //= require jquery
 //= require turbolinks
-//= require_tree .
-
-// 
-// console.log('Hello World from Webpacker')
+//= require_tree 

@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import QrReader from 'react-qr-reader'
 import SampleQRC from '../images/sampleQRCode.jpg'
-// import AdminStatus from './admin_status'
 
 class AdminQRScanner extends Component {
   constructor (props) {
@@ -9,7 +8,6 @@ class AdminQRScanner extends Component {
     this.state = {
       delay: 100,
       result: ''
-      // message: 'Bag Status is now Delievered'
     }
     this.handleScan = this.handleScan.bind(this)
     this.openImageDialog = this.openImageDialog.bind(this)

@@ -3,7 +3,7 @@ import QrcReader from './QrcReader'
 import Header from './header'
 import Footer from './footer'
 
-class GuestPage extends React.Component {
+class GuestPage extends Component {
   render () {
     return (
       <div className='trd-tablet-header-base'>

@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import AdminQRScanner from './admin_qr_scanner'
 import AdminHeader from './admin_header'
 
-class AdminPage extends React.Component {
+class AdminPage extends Component {
   render () {
     return (
       <div className='trd-tablet-header-base'>

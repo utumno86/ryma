@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import footerIcons from '../images/footer-icons.png'
 
-class Footer extends React.Component {
-
+class Footer extends Component {
   render () {
     return (
       <div className='trd-tablet-header-base'>

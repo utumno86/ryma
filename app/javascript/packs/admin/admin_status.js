@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import AdminHeader from './admin_header'
 import jsonFetch from 'json-fetch'
 
-class AdminStatus extends React.Component {
+class AdminStatus extends Component {
   constructor (props) {
     super(props)
     this.state = {

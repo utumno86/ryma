@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import logo from '../images/V_logo_h_cruises_2x.png'
 
-class StatusHeader extends React.Component {
-
+class StatusHeader extends Component {
   render () {
     return (
       <div className='trd-tablet-header-base'>
